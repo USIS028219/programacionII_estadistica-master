@@ -35,11 +35,18 @@
             this.btnCalcularEstandar = new System.Windows.Forms.Button();
             this.btnCalcularTpica = new System.Windows.Forms.Button();
             this.grdEstadistica = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalF1 = new System.Windows.Forms.Label();
+            this.lblTotalXifi = new System.Windows.Forms.Label();
             this.x1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.x2ixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotalx2xFi = new System.Windows.Forms.Label();
+            this.lblMedia = new System.Windows.Forms.Label();
+            this.lblEstandar = new System.Windows.Forms.Label();
+            this.lblTipica = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,27 +120,57 @@
             this.grdEstadistica.Name = "grdEstadistica";
             this.grdEstadistica.RowHeadersWidth = 102;
             this.grdEstadistica.RowTemplate.Height = 40;
-            this.grdEstadistica.Size = new System.Drawing.Size(600, 278);
+            this.grdEstadistica.Size = new System.Drawing.Size(495, 221);
             this.grdEstadistica.TabIndex = 6;
             this.grdEstadistica.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grdEstadistica_KeyUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 421);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "TOTALES:";
+            // 
+            // lblTotalF1
+            // 
+            this.lblTotalF1.AutoSize = true;
+            this.lblTotalF1.Location = new System.Drawing.Point(177, 421);
+            this.lblTotalF1.Name = "lblTotalF1";
+            this.lblTotalF1.Size = new System.Drawing.Size(43, 13);
+            this.lblTotalF1.TabIndex = 8;
+            this.lblTotalF1.Text = "TotalF1";
+            // 
+            // lblTotalXifi
+            // 
+            this.lblTotalXifi.AutoSize = true;
+            this.lblTotalXifi.Location = new System.Drawing.Point(286, 421);
+            this.lblTotalXifi.Name = "lblTotalXifi";
+            this.lblTotalXifi.Size = new System.Drawing.Size(48, 13);
+            this.lblTotalXifi.TabIndex = 9;
+            this.lblTotalXifi.Text = "TotalXiFi";
             // 
             // x1
             // 
             this.x1.HeaderText = "X1";
             this.x1.MinimumWidth = 12;
             this.x1.Name = "x1";
+            this.x1.Width = 50;
             // 
             // f1
             // 
             this.f1.HeaderText = "F1";
             this.f1.MinimumWidth = 12;
             this.f1.Name = "f1";
+            this.f1.Width = 50;
             // 
             // fi
             // 
             this.fi.HeaderText = "Fi";
             this.fi.MinimumWidth = 12;
             this.fi.Name = "fi";
+            this.fi.Width = 50;
             // 
             // xixfi
             // 
@@ -147,11 +184,54 @@
             this.x2ixfi.MinimumWidth = 12;
             this.x2ixfi.Name = "x2ixfi";
             // 
+            // lblTotalx2xFi
+            // 
+            this.lblTotalx2xFi.AutoSize = true;
+            this.lblTotalx2xFi.Location = new System.Drawing.Point(399, 420);
+            this.lblTotalx2xFi.Name = "lblTotalx2xFi";
+            this.lblTotalx2xFi.Size = new System.Drawing.Size(56, 13);
+            this.lblTotalx2xFi.TabIndex = 10;
+            this.lblTotalx2xFi.Text = "TotalX2*Fi";
+            // 
+            // lblMedia
+            // 
+            this.lblMedia.AutoSize = true;
+            this.lblMedia.Location = new System.Drawing.Point(24, 477);
+            this.lblMedia.Name = "lblMedia";
+            this.lblMedia.Size = new System.Drawing.Size(14, 13);
+            this.lblMedia.TabIndex = 11;
+            this.lblMedia.Text = "X";
+            // 
+            // lblEstandar
+            // 
+            this.lblEstandar.AutoSize = true;
+            this.lblEstandar.Location = new System.Drawing.Point(180, 477);
+            this.lblEstandar.Name = "lblEstandar";
+            this.lblEstandar.Size = new System.Drawing.Size(49, 13);
+            this.lblEstandar.TabIndex = 12;
+            this.lblEstandar.Text = "Estandar";
+            // 
+            // lblTipica
+            // 
+            this.lblTipica.AutoSize = true;
+            this.lblTipica.Location = new System.Drawing.Point(289, 476);
+            this.lblTipica.Name = "lblTipica";
+            this.lblTipica.Size = new System.Drawing.Size(36, 13);
+            this.lblTipica.TabIndex = 13;
+            this.lblTipica.Text = "Tipica";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 401);
+            this.ClientSize = new System.Drawing.Size(580, 515);
+            this.Controls.Add(this.lblTipica);
+            this.Controls.Add(this.lblEstandar);
+            this.Controls.Add(this.lblMedia);
+            this.Controls.Add(this.lblTotalx2xFi);
+            this.Controls.Add(this.lblTotalXifi);
+            this.Controls.Add(this.lblTotalF1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grdEstadistica);
             this.Controls.Add(this.btnCalcularTpica);
             this.Controls.Add(this.btnCalcularEstandar);
@@ -181,6 +261,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fi;
         private System.Windows.Forms.DataGridViewTextBoxColumn xixfi;
         private System.Windows.Forms.DataGridViewTextBoxColumn x2ixfi;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalF1;
+        private System.Windows.Forms.Label lblTotalXifi;
+        private System.Windows.Forms.Label lblTotalx2xFi;
+        private System.Windows.Forms.Label lblMedia;
+        private System.Windows.Forms.Label lblEstandar;
+        private System.Windows.Forms.Label lblTipica;
     }
 }
 
